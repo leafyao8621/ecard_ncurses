@@ -42,12 +42,24 @@ int main(void) {
             case 'Q':
                 state = END_SCREEN;
                 break;
+            case 'z':
+            case 'Z':
+                change = CARD_SELECTED;
+                update();
+                for (;;) {
+                    inp = getch();
+                    if (inp == 'x' || inp == 'X') {
+                        change = CARD_UNSELECTED;
+                        break;
+                    }
+                }
+                break;
             }
             update();
             break;
         }
         if (state == END_SCREEN) break;
-        
+
     }
     endwin();
 }
