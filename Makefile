@@ -22,6 +22,6 @@ test: $(OBJ)
 	$(CC) -o $(TEST) $(OBJT) $(CFLAGS)
 
 app: $(OBJ)
-	$(CC) -o $(TEST) $(OBJA) $(CFLAGS)
+	$(CC) -o $(BIN) $(OBJA) $(CFLAGS)
 clean: $(OBJ)
 	@rm $(OBJ) $(BIN) $(TEST)
